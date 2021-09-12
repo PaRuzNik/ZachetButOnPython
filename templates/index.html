@@ -1,0 +1,20 @@
+<DOCTYPE html>
+<html>
+    <body>
+    {%for i in range(4)%}
+    <form action="" method="post">
+	<p>
+	    <input name="id" value="{{ i }}" hidden>
+	</p>
+	<p>
+	    <input type="submit" value="Взять по id={{ i }}">
+	</p>
+    </form>
+    {%endfor%}
+    {% if name %}  
+    <p> {{ name }} _______________
+        {% if image %} <img src="{{ image }}"width="20" height="20">{% endif %}  
+    </p> 
+    {% endif %}
+    </body>
+</html>
